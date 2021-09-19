@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h86-uM-bHk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Настройки-->
+        <scene sceneID="NYM-WM-GSz">
+            <objects>
+                <viewController title="Настройки" id="h86-uM-bHk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bKl-C5-xIE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="FNg-RM-R46">
+                                <rect key="frame" x="20" y="84" width="210" height="168"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOy-5e-cXr">
+                                        <rect key="frame" x="0.0" y="0.0" width="139" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Основные">
+                                            <color key="titleColor" systemColor="systemGrayColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="rJX-An-huF" kind="show" id="btB-XA-ykN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3T-71-ejn">
+                                        <rect key="frame" x="0.0" y="60" width="186" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Уведомления">
+                                            <color key="titleColor" systemColor="systemGrayColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Ygj-zp-JVS" kind="show" id="P4G-Xz-Xqw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWQ-zH-vOM">
+                                        <rect key="frame" x="0.0" y="120" width="210" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Чёрный список">
+                                            <color key="titleColor" systemColor="systemGrayColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="fcB-im-XEc" kind="show" id="8JO-GV-RNm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1F-D3-1hl">
+                                <rect key="frame" x="20" y="725" width="249" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Выйти из системы">
+                                    <color key="titleColor" systemColor="systemGrayColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NeZ-M4-U5p" kind="presentation" modalPresentationStyle="fullScreen" id="ejj-8E-TDp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CbI-LQ-Fhc"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r1F-D3-1hl" firstAttribute="leading" secondItem="bKl-C5-xIE" secondAttribute="leading" constant="20" id="KMT-5d-grL"/>
+                            <constraint firstItem="CbI-LQ-Fhc" firstAttribute="bottom" secondItem="r1F-D3-1hl" secondAttribute="bottom" constant="40" id="MVu-K9-MEz"/>
+                            <constraint firstItem="FNg-RM-R46" firstAttribute="leading" secondItem="CbI-LQ-Fhc" secondAttribute="leading" constant="20" id="UjD-yk-TZ0"/>
+                            <constraint firstItem="FNg-RM-R46" firstAttribute="top" secondItem="CbI-LQ-Fhc" secondAttribute="top" constant="40" id="tkl-yh-FCW"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Настройки" id="iO1-m2-IH2"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIQ-7b-54C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="1221"/>
+        </scene>
+        <!--MainSettings-->
+        <scene sceneID="mW8-cc-U7H">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MainSettings" id="rJX-An-huF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GuK-oj-bAg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXo-Qp-Njb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="1044"/>
+        </scene>
+        <!--notifications-->
+        <scene sceneID="0yB-4c-oCW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="notifications" id="Ygj-zp-JVS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1Bu-5b-GX5"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OzV-gp-Jhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="1094"/>
+        </scene>
+        <!--blackList-->
+        <scene sceneID="5of-pv-HmI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="blackList" id="fcB-im-XEc" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8NY-xD-G16"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QPL-HT-gUp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="1145"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Kkj-2M-qI7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="NeZ-M4-U5p" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hVt-Jb-ose"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pII-Zl-Nb7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="1421"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
